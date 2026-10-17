@@ -53,7 +53,8 @@ const generatedByPiece = {
   2: [
     {file:'piece_02_01.jpg',label:'01 · Look completo · HJ9198-002'},
     {file:'piece_02_02.jpg',label:'02 · Camiseta Miler · IF2086-100'},
-    {file:'piece_02_03.jpg',label:'03 · Calzado en parqueo · HJ9198-002'}
+    {file:'piece_02_03.jpg',label:'03 · Calzado en parqueo · HJ9198-002'},
+    {file:'exterior_b3_revolution_black_outfit.jpg',label:'Exterior B3 · look blanco y negro · HJ9198-002',code:'HJ9198-002',ref:{post:8,photo:3},type:'modelo',exterior:true,exteriorBlock:3}
   ],
   3: [
     {file:'piece_03_01.jpg',label:'01 · Tres modelos en parqueo'},
@@ -81,7 +82,8 @@ const generatedByPiece = {
   7: [
     {file:'piece_07_01.jpg',label:'01 · Revolution 8 negro · HJ9198-002'},
     {file:'piece_07_02.jpg',label:'02 · Revolution 8 caqui · HJ9198-200'},
-    {file:'piece_07_03.jpg',label:'03 · Dos colores en zona de pesas'}
+    {file:'piece_07_03.jpg',label:'03 · Dos colores en zona de pesas'},
+    {file:'exterior_b3_revolution_colorways.jpg',label:'Exterior B3 · Revolution 8 dos colores · HJ9198-002 / HJ9198-200',code:'HJ9198-002',ref:{post:6,photo:6},type:'comparativa',exterior:true,exteriorBlock:3}
   ],
   8: [
     {file:'piece_08_01.jpg',label:'01 · Stride blanco · HV5203-100'},
@@ -91,7 +93,8 @@ const generatedByPiece = {
   9: [
     {file:'piece_09_01.jpg',label:'01 · Preparación junto a recepción'},
     {file:'piece_09_02.jpg',label:'02 · Cordones Vomero Plus · HV8150-018'},
-    {file:'piece_09_03.jpg',label:'03 · Primer paso en cardio'}
+    {file:'piece_09_03.jpg',label:'03 · Primer paso en cardio'},
+    {file:'exterior_b3_vomero_ritual.jpg',label:'Exterior B3 · ritual con Vomero en mano · HV8150-018',code:'HV8150-018',ref:{post:1,photo:8},type:'mano',exterior:true,exteriorBlock:3}
   ],
   10: [
     {file:'piece_10_01.jpg',label:'01 · AeroSwift y Winflo · fuerza',code:'HV9272-005'},
@@ -245,7 +248,7 @@ let archiveType='all';
 let archiveShoe='all';
 function voteOf(id){return photoVotes[id]==='liked'||photoVotes[id]==='discarded'?photoVotes[id]:null}
 function saveVotes(){localStorage.setItem('sportwear-tony-photo-votes-v1',JSON.stringify(photoVotes))}
-function matchesArchiveSource(item){return archiveSource==='all'||(archiveSource==='exterior'?item.exterior:archiveSource==='exterior1'?item.exteriorBlock===1:archiveSource==='exterior2'?item.exteriorBlock===2:item.source===archiveSource)}
+function matchesArchiveSource(item){return archiveSource==='all'||(archiveSource==='exterior'?item.exterior:archiveSource==='exterior1'?item.exteriorBlock===1:archiveSource==='exterior2'?item.exteriorBlock===2:archiveSource==='exterior3'?item.exteriorBlock===3:item.source===archiveSource)}
 function updateArchiveCounts(shown){
   const sourceItems=galleryItems.filter(matchesArchiveSource);
   $('#archive-count').textContent=`${shown} de ${sourceItems.length} fotos`;
