@@ -46,7 +46,8 @@ const generatedByPiece = {
   1: [
     {file:'piece_01_01.jpg',label:'01 · Look completo · HV8150-018'},
     {file:'piece_01_02.jpg',label:'02 · Detalle de calzado · HV8150-018'},
-    {file:'piece_01_03.jpg',label:'03 · Movimiento · HV8150-018'}
+    {file:'piece_01_03.jpg',label:'03 · Movimiento · HV8150-018'},
+    {file:'exterior_b1_vomero_motion.jpg',label:'Exterior B1 · carrera frente a Blitz · HV8150-018',code:'HV8150-018',ref:{post:1,photo:1},type:'movimiento',exterior:true}
   ],
   2: [
     {file:'piece_02_01.jpg',label:'01 · Look completo · HJ9198-002'},
@@ -66,7 +67,8 @@ const generatedByPiece = {
   5: [
     {file:'piece_05_01.jpg',label:'01 · Parqueo de Blitz · HV9272-005'},
     {file:'piece_05_02.jpg',label:'02 · Zancada · HV9272-005'},
-    {file:'piece_05_03.jpg',label:'03 · Look completo · HJ3377-010'}
+    {file:'piece_05_03.jpg',label:'03 · Look completo · HJ3377-010'},
+    {file:'exterior_b1_winflo_hand.jpg',label:'Exterior B1 · Winflo 12 en mano · HV9272-005',code:'HV9272-005',ref:{post:4,photo:1},type:'mano',exterior:true}
   ],
   6: [
     {file:'piece_06_01.jpg',label:'01 · Nike Pro manga larga · FB7919-010'},
@@ -96,7 +98,8 @@ const generatedByPiece = {
   11: [
     {file:'piece_11_01.jpg',label:'01 · Revolution caqui · muro de fuerza',code:'HJ9198-200'},
     {file:'piece_11_02.jpg',label:'02 · Revolution caqui · detalle en espejos',code:'HJ9198-200'},
-    {file:'piece_11_03.jpg',label:'03 · Revolution caqui · look en pesas',code:'HJ9198-200'}
+    {file:'piece_11_03.jpg',label:'03 · Revolution caqui · look en pesas',code:'HJ9198-200'},
+    {file:'exterior_b1_revolution_khaki_stretch.jpg',label:'Exterior B1 · estiramiento en fachada · HJ9198-200',code:'HJ9198-200',ref:{post:1,photo:1},type:'modelo',exterior:true}
   ],
   12: [
     {file:'piece_12_01.jpg',label:'01 · Promina y medias · detalle',code:'FV5285-302'},
@@ -111,7 +114,8 @@ const generatedByPiece = {
   14: [
     {file:'piece_14_01.jpg',label:'01 · Revolution 8 negra · par en piso'},
     {file:'piece_14_02.jpg',label:'02 · Revolution 8 caqui · vista posterior'},
-    {file:'piece_14_03.jpg',label:'03 · Tres modelos · perfiles'}
+    {file:'piece_14_03.jpg',label:'03 · Tres modelos · perfiles'},
+    {file:'exterior_b1_revolution_black_product.jpg',label:'Exterior B1 · par negro sobre concreto · HJ9198-002',code:'HJ9198-002',ref:{post:4,photo:3},type:'producto',exterior:true}
   ]
 };
 
@@ -226,7 +230,7 @@ const productExtraPhotos=[
   {file:'product_HJ9198-200_02.jpg',code:'HJ9198-200',piece:14,type:'modelo',ref:{post:11,photo:3},label:'Revolution 8 caqui · puesto'},
   {file:'product_HJ9198-200_03.jpg',code:'HJ9198-200',piece:14,type:'mano',ref:{post:4,photo:1},label:'Revolution 8 caqui · en mano'}
 ];
-const generatedPhotos=[...pieces.flatMap(piece=>(generatedByPiece[piece.id]||[]).map((item,index)=>({id:`ia-${String(piece.id).padStart(2,'0')}-${String(index+1).padStart(2,'0')}`,piece:piece.id,photo:index+1,src:`./generated__${item.file}`,label:item.label,code:item.code||(piece.id===13?piece.main[index]:(piece.id===14&&index<2?piece.main[index]:null)),ref:piece.referenceShots?.[index],source:'ia',initialType:generatedTypeByPiece[piece.id]?.[index]||'sin_clasificar'}))),...productExtraPhotos.map((item,index)=>({id:`ia-product-${String(index+1).padStart(2,'0')}`,piece:item.piece,photo:index+1,src:`./generated__${item.file}`,label:item.label,code:item.code,ref:item.ref,source:'ia',initialType:item.type}))];
+const generatedPhotos=[...pieces.flatMap(piece=>(generatedByPiece[piece.id]||[]).map((item,index)=>({id:`ia-${String(piece.id).padStart(2,'0')}-${String(index+1).padStart(2,'0')}`,piece:piece.id,photo:index+1,src:`./generated__${item.file}`,label:item.label,code:item.code||(piece.id===13?piece.main[index]:(piece.id===14&&index<2?piece.main[index]:null)),ref:item.ref||piece.referenceShots?.[index],source:'ia',exterior:!!item.exterior,initialType:item.type||generatedTypeByPiece[piece.id]?.[index]||'sin_clasificar'}))),...productExtraPhotos.map((item,index)=>({id:`ia-product-${String(index+1).padStart(2,'0')}`,piece:item.piece,photo:index+1,src:`./generated__${item.file}`,label:item.label,code:item.code,ref:item.ref,source:'ia',initialType:item.type}))];
 const galleryItems=[...galleryPhotos.map(photo=>({...photo,source:'original',initialType:initialTypes[photo.id]||'sin_clasificar'})),...generatedPhotos];
 const galleryItemById=new Map(galleryItems.map(item=>[item.id,item]));
 const photoTypes=(()=>{try{const saved=JSON.parse(localStorage.getItem('sportwear-photo-types-v1')||'{}');return saved&&typeof saved==='object'&&!Array.isArray(saved)?saved:{}}catch{return {}}})();
@@ -238,15 +242,16 @@ let archiveType='all';
 let archiveShoe='all';
 function voteOf(id){return photoVotes[id]==='liked'||photoVotes[id]==='discarded'?photoVotes[id]:null}
 function saveVotes(){localStorage.setItem('sportwear-tony-photo-votes-v1',JSON.stringify(photoVotes))}
+function matchesArchiveSource(item){return archiveSource==='all'||(archiveSource==='exterior'?item.exterior:item.source===archiveSource)}
 function updateArchiveCounts(shown){
-  const sourceItems=galleryItems.filter(item=>archiveSource==='all'||item.source===archiveSource);
+  const sourceItems=galleryItems.filter(matchesArchiveSource);
   $('#archive-count').textContent=`${shown} de ${sourceItems.length} fotos`;
   const likes=sourceItems.filter(item=>voteOf(item.id)==='liked').length;
   const discarded=sourceItems.filter(item=>voteOf(item.id)==='discarded').length;
   $('#liked-count').textContent=`${likes} likes · ${discarded} descartadas`;
 }
 function renderArchive(){
-  const shown=galleryItems.filter(item=>(archiveSource==='all'||item.source===archiveSource)&&(archiveFilter==='all'||voteOf(item.id)===archiveFilter)&&(archiveType==='all'||photoType(item)===archiveType)&&(archiveShoe==='all'||item.code===archiveShoe));
+  const shown=galleryItems.filter(item=>matchesArchiveSource(item)&&(archiveFilter==='all'||voteOf(item.id)===archiveFilter)&&(archiveType==='all'||photoType(item)===archiveType)&&(archiveShoe==='all'||item.code===archiveShoe));
   $('#archive-grid').innerHTML=shown.map(item=>{
     const original=item.source==='original';
     const title=original?`POST ${String(item.post).padStart(2,'0')} / FOTO ${String(item.photo).padStart(2,'0')}`:item.code?`IA / ${item.code}`:`IA / PIEZA ${String(item.piece).padStart(2,'0')} / FOTO ${item.photo}`;
@@ -319,7 +324,7 @@ document.addEventListener('click',event=>{
   const filter=event.target.closest('[data-week]');if(filter){state.week=filter.dataset.week;$$('.filter').forEach(b=>b.classList.toggle('active',b===filter));renderPlanning();return}
   const group=event.target.closest('[data-group]');if(group){state.group=group.dataset.group;$$('.product-filter').forEach(b=>b.classList.toggle('active',b===group));renderCatalog()}
 });
-document.addEventListener('change',event=>{if(event.target.id==='gallery-type'){archiveType=event.target.value;renderArchive()}else if(event.target.id==='gallery-shoe'){archiveShoe=event.target.value;if(archiveShoe!=='all')archiveSource='ia';renderArchive()}else if(event.target.matches('[data-photo-type]'))setPhotoType(event.target.dataset.photoType,event.target.value)});
+document.addEventListener('change',event=>{if(event.target.id==='gallery-type'){archiveType=event.target.value;renderArchive()}else if(event.target.id==='gallery-shoe'){archiveShoe=event.target.value;if(archiveShoe!=='all'&&archiveSource==='original')archiveSource='ia';renderArchive()}else if(event.target.matches('[data-photo-type]'))setPhotoType(event.target.dataset.photoType,event.target.value)});
 document.addEventListener('keydown',event=>{if((event.key==='Enter'||event.key===' ')&&event.target.matches('.plan-card-image[data-open]')){event.preventDefault();openPiece(event.target.dataset.open)}});
 $('#planning-search').addEventListener('input',event=>{state.planningQuery=event.target.value;renderPlanning()});
 $('#catalog-search').addEventListener('input',event=>{state.catalogQuery=event.target.value;renderCatalog()});
