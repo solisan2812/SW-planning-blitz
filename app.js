@@ -18,20 +18,20 @@ const products = [
 ];
 
 const pieces = [
-  {id:1,week:1,title:'La salida.',type:'RUNNING / EDITORIAL',description:'La preparación, el primer paso y un look de running con acento azul en Blitz.',main:['HV8150-018','HV5203-010'],extra:['HJ4176-010','DX5025-100'],shots:['Atarse los tenis junto al muro oscuro de Blitz','Silueta completa con espacio negativo','Perfil del zapato puesto sobre el piso de madera','Zancada con movimiento real en la zona de cardio','Close-up del short y cierre editorial'],ref:1,images:[1,2,5],copy:'Un look para empezar la sesión: negro, gris y un acento azul en los pies.'},
-  {id:2,week:1,title:'Negro sobre madera.',type:'LOOK / MONOCROMO',description:'Camiseta blanca y Revolution negra sobre el piso claro de Blitz.',main:['HJ9198-002','IF2086-100'],extra:['IF9487-010','DX5025-100'],shots:['Look frontal y posterior','Zapato sobre el piso de madera','Detalle de manga','Cintura y largo del short','Plano caminando por el pasillo'],ref:7,images:[1,3,6],copy:'Blanco y negro, sin complicaciones. Un look de entrenamiento para repetir.'},
+  {id:1,week:1,title:'La salida.',type:'RUNNING / EDITORIAL',description:'La preparación, el primer paso y un look de running con acento azul en el exterior de Blitz.',main:['HV8150-018','HV5203-010'],extra:['HJ4176-010','DX5025-100'],shots:['Atarse los tenis junto al muro exterior de Blitz','Silueta completa con espacio negativo','Perfil del zapato puesto sobre el concreto','Zancada con movimiento real en el parqueo','Close-up del short y cierre editorial'],ref:1,images:[1,2,5],copy:'Un look para empezar la sesión: negro, gris y un acento azul en los pies.'},
+  {id:2,week:1,title:'Blanco y negro en fachada.',type:'LOOK / MONOCROMO',description:'Camiseta blanca y Revolution negra frente a la fachada y el cordón de concreto de Blitz.',main:['HJ9198-002','IF2086-100'],extra:['IF9487-010','DX5025-100'],shots:['Look frontal y posterior','Zapato sobre el concreto exterior','Detalle de manga','Cintura y largo del short','Plano caminando por la acera exterior'],ref:7,images:[1,3,6],copy:'Blanco y negro, sin complicaciones. Un look de entrenamiento para repetir.'},
   {id:3,week:1,title:'Cinco pares, cinco momentos.',type:'PRODUCTO / COMPARATIVO',description:'Un panorama visual de los cinco modelos de calzado incluidos.',main:['HV8150-018','HV9272-005','FV5285-302','HJ9198-002','HJ9198-200'],extra:[],shots:['Portada con los cinco pares','Cada modelo de perfil en el mismo fondo','Cada modelo puesto con encuadre equivalente','Cierre con la colección completa'],ref:4,images:[1,2,6],copy:'Cinco siluetas, cinco formas de moverse. ¿Con cuál saldrías hoy?'},
-  {id:4,week:2,title:'Caminar también cuenta.',type:'WALKING / GIMNASIO',description:'La Promina en un recorrido por el interior de Blitz, sin perder el look completo.',main:['FV5285-302','BQ1260-010'],extra:['IF9487-010','DX5025-100'],shots:['Caminata por el pasillo de Blitz','Plano general del gimnasio','Lateral del zapato en uso','Detalle de las medias','Retrato relajado'],ref:9,images:[1,4,7],copy:'Hay días para correr y días para moverse a otro ritmo.'},
+  {id:4,week:2,title:'Caminar también cuenta.',type:'WALKING / EXTERIOR',description:'La Promina en un recorrido por la acera y el parqueo de Blitz, con el look completo.',main:['FV5285-302','BQ1260-010'],extra:['IF9487-010','DX5025-100'],shots:['Caminata por la acera de Blitz','Plano general de la fachada','Lateral del zapato en uso','Detalle de las medias','Retrato relajado'],ref:9,images:[1,4,7],copy:'Hay días para correr y días para moverse a otro ritmo.'},
   {id:5,week:2,title:'Acento rojo.',type:'RUNNING / COLOR',description:'La Winflo 12 aporta el único golpe de color en un conjunto oscuro.',main:['HV9272-005','HJ3377-010'],extra:['HJ4176-010'],shots:['Fondo gris o negro que deje visible el rojo','Zapato en movimiento','Detalle de color','Retrato previo a la carrera','Look completo'],ref:5,images:[1,3,4],copy:'Un detalle rojo cambia todo el conjunto.'},
-  {id:6,week:2,title:'Capas para salir.',type:'TEXTIL / CAPAS',description:'Dos formas de construir un conjunto de entrenamiento con prendas negras.',main:['FB7919-010','HV5210-010'],extra:['HV8150-018','DX5025-100'],shots:['Una toma con cada capa','Cambio de prenda en secuencia','Textura y ajuste en detalle','Look completo con calzado','Cierre en movimiento'],ref:5,images:[1,4,8],copy:'Antes de salir, cada capa tiene su lugar.'},
+  {id:6,week:2,title:'Capas para salir.',type:'TEXTIL / CAPAS',description:'Dos formas de construir un conjunto de entrenamiento con prendas negras junto a los pilares exteriores.',main:['FB7919-010','HV5210-010'],extra:['HV8150-018','HJ4176-010','DX5025-100'],shots:['Una toma con cada capa','Cambio de prenda en secuencia','Textura y ajuste en detalle','Look completo con calzado','Cierre en movimiento'],ref:5,images:[1,4,8],copy:'Antes de salir, cada capa tiene su lugar.'},
   {id:7,week:3,title:'Una silueta, dos colores.',type:'CALZADO / COLORWAYS',description:'Revolution 8 negra y caqui, fotografiadas con la misma composición.',main:['HJ9198-002','HJ9198-200'],extra:['IF2086-010','IF2086-100'],shots:['Mismo encuadre para cada color','Misma luz y pose en ambas versiones','Zapatos de perfil','Dos looks de cuerpo completo','Comparativa final lado a lado'],ref:4,images:[1,2,6],copy:'Misma silueta. Dos maneras de llevarla.'},
-  {id:8,week:3,title:'Blanco y negro.',type:'TEXTIL / COMPARATIVO',description:'La camiseta Stride de manga corta en dos colores, con encuadres espejo.',main:['HV5203-100','HV5203-010'],extra:['IF9487-010','DX5025-100'],shots:['Dos looks con idéntica composición','Detalle de manga y espalda','Textura de cada color','Foto conjunta de cierre'],ref:7,images:[1,3,5],copy:'Una camiseta, dos formas de resolver el look.'},
-  {id:9,week:3,title:'Ritual antes de correr.',type:'HISTORIA / RUNNING',description:'Del equipo preparado al primer paso en la zona de cardio de Blitz.',main:['HV8150-018','HV5210-010'],extra:['HJ4176-010','DX5025-100'],shots:['Prendas preparadas','Ponerse las medias','Ajustar cordones','Caminar hacia la zona de cardio','Primer paso de la sesión'],ref:1,images:[1,5,9],copy:'La sesión empieza antes del primer kilómetro.'},
+  {id:8,week:3,title:'Blanco y negro.',type:'TEXTIL / COMPARATIVO',description:'La camiseta Stride de manga corta en dos colores, con el mismo encuadre frente al muro exterior.',main:['HV5203-100','HV5203-010'],extra:['IF9487-010','HV9272-005','DX5025-100'],shots:['Dos looks con idéntica composición','Detalle de manga y espalda','Textura de cada color','Foto conjunta de cierre'],ref:7,images:[1,3,5],copy:'Una camiseta, dos formas de resolver el look.'},
+  {id:9,week:3,title:'Ritual antes de correr.',type:'HISTORIA / RUNNING',description:'Del equipo preparado al primer paso frente a la fachada de Blitz.',main:['HV8150-018','HV5210-010'],extra:['HJ4176-010','DX5025-100'],shots:['Prendas preparadas','Ponerse las medias','Ajustar cordones','Caminar por el parqueo hacia la fachada','Primer paso de la sesión'],ref:1,images:[1,5,9],copy:'La sesión empieza antes del primer kilómetro.'},
   {id:10,week:4,title:'Tres formas de vestir el entrenamiento.',type:'LOOKS / COMPARATIVO',description:'Tres camisetas, tres estilos de entrenamiento y una misma línea visual.',main:['HJ3377-010','HV5203-100','IF2086-010'],extra:['HV9272-005','IF9487-010'],shots:['Portada con los tres cambios','Dos imágenes por look: cuerpo completo y detalle','Zapato en uso','Cierre con los tres looks'],ref:5,images:[1,3,4],copy:'Tres looks de entrenamiento. ¿Cuál se parece más al tuyo?'},
-  {id:11,week:4,title:'El caqui en Blitz.',type:'COLOR / INTERIOR',description:'El Revolution 8 caqui destaca frente a los muros oscuros del gimnasio.',main:['HJ9198-200','IF2086-010'],extra:['BQ1260-010','DX5025-100'],shots:['Muro oscuro con acento caqui','Zapato sobre el piso de madera','Retrato lateral','Detalle del calzado puesto','Cierre con look completo'],ref:7,images:[1,3,6],copy:'Un color distinto para salir de la rutina.'},
+  {id:11,week:4,title:'El caqui en Blitz.',type:'COLOR / EXTERIOR',description:'El Revolution 8 caqui destaca frente al metal oscuro y los muros de concreto exteriores.',main:['HJ9198-200','IF2086-010'],extra:['BQ1260-010','DX5025-100'],shots:['Muro oscuro con acento caqui','Zapato sobre el concreto exterior','Retrato lateral','Detalle del calzado puesto','Cierre con look completo'],ref:7,images:[1,3,6],copy:'Un color distinto para salir de la rutina.'},
   {id:12,week:4,title:'Los detalles hacen el conjunto.',type:'DETALLE / CIERRE',description:'Texturas, medias y terminaciones que completan una sesión editorial.',main:['DX5025-100','HJ4176-010'],extra:['FV5285-302','HV5203-010'],shots:['Macro de textura','Medias con calzado','Cintura y dobladillo','Plano de las prendas juntas','Look completo final'],ref:12,images:[1,3,8],copy:'Lo que completa el look también merece un primer plano.'},
-  {id:13,week:5,title:'El calzado, protagonista.',type:'PRODUCTO / HERO',description:'Tres modelos fotografiados como protagonistas: par escultórico, vista cenital y tenis en mano.',main:['HV8150-018','HV9272-005','FV5285-302'],extra:[],shots:['Vomero Plus: par de perfil sobre banco','Winflo 12: par visto desde arriba','Promina: par sostenido con la mano','Detalle de material y suela de cada modelo'],ref:4,images:[3,1,9],referenceShots:[{post:4,photo:3},{post:10,photo:9},{post:20,photo:8}],copy:'Cada par tiene una historia en sus detalles.'},
-  {id:14,week:5,title:'Revolution 8, dos miradas.',type:'PRODUCTO / COLORWAYS',description:'El negro y el caqui en tomas de producto, más una composición final con tres modelos.',main:['HJ9198-002','HJ9198-200'],extra:['HV8150-018','HV9272-005','FV5285-302'],shots:['Revolution negra: par en piso oscuro','Revolution caqui: par en sala de espejos','Colección: perfiles de tres modelos','Close-up de tejido, talón y mediasuela'],ref:6,images:[1,3,6],referenceShots:[{post:2,photo:3},{post:6,photo:6},{post:6,photo:3}],copy:'La diferencia está en cómo se ve cada silueta de cerca.'}
+  {id:13,week:5,title:'El calzado, protagonista.',type:'PRODUCTO / HERO',description:'Tres modelos fotografiados como protagonistas: par escultórico, vista cenital y tenis en mano.',main:['HV8150-018','HV9272-005','FV5285-302'],extra:[],shots:['Vomero Plus: par escultórico sobre cordón de concreto','Winflo 12: par visto desde arriba','Promina: par sostenido con la mano','Detalle de material y suela de cada modelo'],ref:4,images:[3,1,9],referenceShots:[{post:4,photo:3},{post:10,photo:9},{post:20,photo:8}],copy:'Cada par tiene una historia en sus detalles.'},
+  {id:14,week:5,title:'Revolution 8, dos miradas.',type:'PRODUCTO / COLORWAYS',description:'El negro y el caqui en tomas de producto, más una composición final con tres modelos.',main:['HJ9198-002','HJ9198-200'],extra:['HV8150-018','HV9272-005','FV5285-302'],shots:['Revolution negra: par en piso oscuro','Revolution caqui: par junto al muro exterior','Colección: perfiles de tres modelos','Close-up de tejido, talón y mediasuela'],ref:6,images:[1,3,6],referenceShots:[{post:2,photo:3},{post:6,photo:6},{post:6,photo:3}],copy:'La diferencia está en cómo se ve cada silueta de cerca.'}
 ];
 
 const references = [
@@ -59,7 +59,8 @@ const generatedByPiece = {
   3: [
     {file:'piece_03_01.jpg',label:'01 · Tres modelos en parqueo'},
     {file:'piece_03_02.jpg',label:'02 · Revolution 8 · dos colores'},
-    {file:'piece_03_03.jpg',label:'03 · Los cinco pares'}
+    {file:'piece_03_03.jpg',label:'03 · Los cinco pares'},
+    {file:'exterior_b5_collection.jpg',label:'Exterior B5 · tres modelos en concreto',codes:['HV9272-005','FV5285-302','HJ9198-200'],ref:{post:6,photo:3},type:'comparativa',exterior:true,exteriorBlock:5}
   ],
   4: [
     {file:'piece_04_01.jpg',label:'01 · Caminata · FV5285-302'},
@@ -77,18 +78,20 @@ const generatedByPiece = {
   6: [
     {file:'piece_06_01.jpg',label:'01 · Nike Pro manga larga · FB7919-010'},
     {file:'piece_06_02.jpg',label:'02 · Stride sin mangas · HV5210-010'},
-    {file:'piece_06_03.jpg',label:'03 · Cambio de capa · HV8150-018'}
+    {file:'piece_06_03.jpg',label:'03 · Cambio de capa · HV8150-018'},
+    {file:'exterior_b4_layers.jpg',label:'Exterior B4 · Nike Pro y Vomero · HV8150-018',code:'HV8150-018',ref:{post:5,photo:1},type:'modelo',exterior:true,exteriorBlock:4}
   ],
   7: [
     {file:'piece_07_01.jpg',label:'01 · Revolution 8 negro · HJ9198-002'},
     {file:'piece_07_02.jpg',label:'02 · Revolution 8 caqui · HJ9198-200'},
     {file:'piece_07_03.jpg',label:'03 · Dos colores en zona de pesas'},
-    {file:'exterior_b3_revolution_colorways.jpg',label:'Exterior B3 · Revolution 8 dos colores · HJ9198-002 / HJ9198-200',code:'HJ9198-002',ref:{post:6,photo:6},type:'comparativa',exterior:true,exteriorBlock:3}
+    {file:'exterior_b3_revolution_colorways.jpg',label:'Exterior B3 · Revolution 8 dos colores · HJ9198-002 / HJ9198-200',code:'HJ9198-002',codes:['HJ9198-002','HJ9198-200'],ref:{post:6,photo:6},type:'comparativa',exterior:true,exteriorBlock:3}
   ],
   8: [
     {file:'piece_08_01.jpg',label:'01 · Stride blanco · HV5203-100'},
     {file:'piece_08_02.jpg',label:'02 · Stride negro · HV5203-010'},
-    {file:'piece_08_03.jpg',label:'03 · Dos looks en sala de espejos'}
+    {file:'piece_08_03.jpg',label:'03 · Dos looks en sala de espejos'},
+    {file:'exterior_b4_stride.jpg',label:'Exterior B4 · Stride blanca y Winflo · HV9272-005',code:'HV9272-005',ref:{post:1,photo:1},type:'modelo',exterior:true,exteriorBlock:4}
   ],
   9: [
     {file:'piece_09_01.jpg',label:'01 · Preparación junto a recepción'},
@@ -99,7 +102,8 @@ const generatedByPiece = {
   10: [
     {file:'piece_10_01.jpg',label:'01 · AeroSwift y Winflo · fuerza',code:'HV9272-005'},
     {file:'piece_10_02.jpg',label:'02 · Stride y Winflo · espejos',code:'HV9272-005'},
-    {file:'piece_10_03.jpg',label:'03 · Miler y Winflo · pesas',code:'HV9272-005'}
+    {file:'piece_10_03.jpg',label:'03 · Miler y Winflo · pesas',code:'HV9272-005'},
+    {file:'exterior_b4_look.jpg',label:'Exterior B4 · AeroSwift y Winflo · HV9272-005',code:'HV9272-005',ref:{post:5,photo:7},type:'modelo',exterior:true,exteriorBlock:4}
   ],
   11: [
     {file:'piece_11_01.jpg',label:'01 · Revolution caqui · muro de fuerza',code:'HJ9198-200'},
@@ -110,12 +114,14 @@ const generatedByPiece = {
   12: [
     {file:'piece_12_01.jpg',label:'01 · Promina y medias · detalle',code:'FV5285-302'},
     {file:'piece_12_02.jpg',label:'02 · Challenger y Stride · textura'},
-    {file:'piece_12_03.jpg',label:'03 · Look completo con Promina · cardio',code:'FV5285-302'}
+    {file:'piece_12_03.jpg',label:'03 · Look completo con Promina · cardio',code:'FV5285-302'},
+    {file:'exterior_b5_detail.jpg',label:'Exterior B5 · Promina y medias · FV5285-302',code:'FV5285-302',ref:{post:5,photo:5},type:'detalle',exterior:true,exteriorBlock:5}
   ],
   13: [
     {file:'piece_13_01.jpg',label:'01 · Vomero Plus · par escultórico'},
     {file:'piece_13_02.jpg',label:'02 · Winflo 12 · vista cenital'},
-    {file:'piece_13_03.jpg',label:'03 · Promina · tenis en mano'}
+    {file:'piece_13_03.jpg',label:'03 · Promina · tenis en mano'},
+    {file:'exterior_b5_hero.jpg',label:'Exterior B5 · Vomero escultórico · HV8150-018',code:'HV8150-018',ref:{post:4,photo:3},type:'producto',exterior:true,exteriorBlock:5}
   ],
   14: [
     {file:'piece_14_01.jpg',label:'01 · Revolution 8 negra · par en piso'},
@@ -136,10 +142,10 @@ const blitzLocationLibrary = {
   parking:{src:'./blitz-parking-reference.jpg',label:'Blitz · parqueo exterior'}
 };
 const blitzLocationsByPiece = {
-  1:[5,1,'parking'],2:[2,4,5],3:['parking',4,7],4:[5,3,2],
-  5:['parking',4,1],6:[5,6,7],7:[4,2,7],8:[7,2,4],
-  9:[1,3,5],10:[6,7,2],11:[6,7,2],12:[2,1,3],
-  13:[4,2,1],14:[6,7,2]
+  1:['parking',5,1],2:['parking',2,4],3:['parking',4,7],4:['parking',5,3],
+  5:['parking',4,1],6:['parking',5,6],7:['parking',4,2],8:['parking',7,2],
+  9:['parking',1,3],10:['parking',6,7],11:['parking',6,7],12:['parking',2,1],
+  13:['parking',4,2],14:['parking',6,7]
 };
 
 const $ = selector => document.querySelector(selector);
@@ -236,7 +242,7 @@ const productExtraPhotos=[
   {file:'product_HJ9198-200_02.jpg',code:'HJ9198-200',piece:14,type:'modelo',ref:{post:11,photo:3},label:'Revolution 8 caqui · puesto'},
   {file:'product_HJ9198-200_03.jpg',code:'HJ9198-200',piece:14,type:'mano',ref:{post:4,photo:1},label:'Revolution 8 caqui · en mano'}
 ];
-const generatedPhotos=[...pieces.flatMap(piece=>(generatedByPiece[piece.id]||[]).map((item,index)=>({id:`ia-${String(piece.id).padStart(2,'0')}-${String(index+1).padStart(2,'0')}`,piece:piece.id,photo:index+1,src:`./generated__${item.file}`,label:item.label,code:item.code||(piece.id===13?piece.main[index]:(piece.id===14&&index<2?piece.main[index]:null)),ref:item.ref||piece.referenceShots?.[index],source:'ia',exterior:!!item.exterior,exteriorBlock:item.exteriorBlock||null,initialType:item.type||generatedTypeByPiece[piece.id]?.[index]||'sin_clasificar'}))),...productExtraPhotos.map((item,index)=>({id:`ia-product-${String(index+1).padStart(2,'0')}`,piece:item.piece,photo:index+1,src:`./generated__${item.file}`,label:item.label,code:item.code,ref:item.ref,source:'ia',initialType:item.type}))];
+const generatedPhotos=[...pieces.flatMap(piece=>(generatedByPiece[piece.id]||[]).map((item,index)=>({id:`ia-${String(piece.id).padStart(2,'0')}-${String(index+1).padStart(2,'0')}`,piece:piece.id,photo:index+1,src:`./generated__${item.file}`,label:item.label,code:item.code||(piece.id===13?piece.main[index]:(piece.id===14&&index<2?piece.main[index]:null)),ref:item.ref||piece.referenceShots?.[index],source:'ia',codes:item.codes||[item.code].filter(Boolean),exterior:!!item.exterior,exteriorBlock:item.exteriorBlock||null,initialType:item.type||generatedTypeByPiece[piece.id]?.[index]||'sin_clasificar'}))),...productExtraPhotos.map((item,index)=>({id:`ia-product-${String(index+1).padStart(2,'0')}`,piece:item.piece,photo:index+1,src:`./generated__${item.file}`,label:item.label,code:item.code,ref:item.ref,source:'ia',initialType:item.type}))];
 const galleryItems=[...galleryPhotos.map(photo=>({...photo,source:'original',initialType:initialTypes[photo.id]||'sin_clasificar'})),...generatedPhotos];
 const galleryItemById=new Map(galleryItems.map(item=>[item.id,item]));
 const photoTypes=(()=>{try{const saved=JSON.parse(localStorage.getItem('sportwear-photo-types-v1')||'{}');return saved&&typeof saved==='object'&&!Array.isArray(saved)?saved:{}}catch{return {}}})();
@@ -248,7 +254,7 @@ let archiveType='all';
 let archiveShoe='all';
 function voteOf(id){return photoVotes[id]==='liked'||photoVotes[id]==='discarded'?photoVotes[id]:null}
 function saveVotes(){localStorage.setItem('sportwear-tony-photo-votes-v1',JSON.stringify(photoVotes))}
-function matchesArchiveSource(item){return archiveSource==='all'||(archiveSource==='exterior'?item.exterior:archiveSource==='exterior1'?item.exteriorBlock===1:archiveSource==='exterior2'?item.exteriorBlock===2:archiveSource==='exterior3'?item.exteriorBlock===3:item.source===archiveSource)}
+function matchesArchiveSource(item){if(archiveSource==='all')return true;if(archiveSource==='exterior')return item.exterior;if(/^exterior[1-5]$/.test(archiveSource))return item.exteriorBlock===Number(archiveSource.slice(8));return item.source===archiveSource}
 function updateArchiveCounts(shown){
   const sourceItems=galleryItems.filter(matchesArchiveSource);
   $('#archive-count').textContent=`${shown} de ${sourceItems.length} fotos`;
@@ -257,7 +263,7 @@ function updateArchiveCounts(shown){
   $('#liked-count').textContent=`${likes} likes · ${discarded} descartadas`;
 }
 function renderArchive(){
-  const shown=galleryItems.filter(item=>matchesArchiveSource(item)&&(archiveFilter==='all'||voteOf(item.id)===archiveFilter)&&(archiveType==='all'||photoType(item)===archiveType)&&(archiveShoe==='all'||item.code===archiveShoe));
+  const shown=galleryItems.filter(item=>matchesArchiveSource(item)&&(archiveFilter==='all'||voteOf(item.id)===archiveFilter)&&(archiveType==='all'||photoType(item)===archiveType)&&(archiveShoe==='all'||(item.code===archiveShoe||item.codes?.includes(archiveShoe))));
   $('#archive-grid').innerHTML=shown.map(item=>{
     const original=item.source==='original';
     const title=original?`POST ${String(item.post).padStart(2,'0')} / FOTO ${String(item.photo).padStart(2,'0')}`:item.code?`IA / ${item.code}`:`IA / PIEZA ${String(item.piece).padStart(2,'0')} / FOTO ${item.photo}`;
